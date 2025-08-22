@@ -139,7 +139,7 @@ const Hero = () => {
         </h1>
         <p className="text-xl md:text-2xl mb-4 text-gray-300">大学1年生 • Web Developer</p>
         <p className="text-lg md:text-xl opacity-80 mb-8 max-w-2xl mx-auto">
-          React & TypeScript で美しいWebサイトを作る、未来のフルスタックエンジニア
+          React & Laravel でフルスタック開発、成長し続けるエンジニア
         </p>
         <div className="flex gap-4 justify-center">
           <a href="#projects" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
@@ -163,7 +163,7 @@ const About = () => {
           <h2 className="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
           <p className="text-gray-600 text-lg">
             神奈川県出身の大学1年生です。将来は自分のサービスを立ち上げることを目指しており、起業に興味があります。
-            現在はPHPとLaravelを中心にバックエンドの学習を進めつつ、ReactやTypeScriptなどのフロントエンド技術にも取り組んでいます。
+            現在はReactでのフロントエンド開発と、PHP/Laravelでのバックエンド開発を学習中です。
             将来的にはフルスタックエンジニアとして幅広く開発に携わりたいと考えています。</p>
         </div>
         
@@ -173,7 +173,7 @@ const About = () => {
             <p className="text-gray-600 leading-relaxed">
               大学入試が終わった2025年2月に、将来役立つ実用的なスキルを身につけたいと思い、独学でプログラミングを始めました。
               最初はHTML/CSSから学び、徐々にJavaScriptやReact、TypeScriptへと範囲を広げています。
-              現在は実務レベルを目指して、自分なりの作品制作に取り組んでいます。
+              そしてPHP/Laravelへと学習範囲を広げ、現在は鏡花水月城などの実践的な作品制作に取り組んでいます。
             </p>
             <p className="text-gray-600 leading-relaxed">
               特に美しいUI/UXと最新技術への関心が強く、ユーザーに使いやすく見た目も魅力的なWebサイトづくりを大切にしています。
@@ -184,7 +184,7 @@ const About = () => {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <Code className="w-8 h-8 text-blue-500 mb-4" />
               <h4 className="font-bold text-gray-800 mb-2">技術力</h4>
-              <p className="text-sm text-gray-600">React, TypeScript,等のモダンな技術スタック</p>
+              <p className="text-sm text-gray-600">React + PHP/Laravelでの制作</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <User className="w-8 h-8 text-purple-500 mb-4" />
@@ -212,31 +212,31 @@ const About = () => {
 const Projects = () => {
   const projects = [
     {
-      title: "Kyoka Suigetsu Castle",
+      title: "鏡花水月城（プロトタイプ版）",
       description: "React + TypeScript で制作した和風デザインのWebサイト。レスポンシブデザインと美しいアニメーションが特徴。",
-      tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      image: "https://via.placeholder.com/600x400/3B82F6/ffffff?text=Kyoka+Suigetsu+Castle",
+      tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Swiper"],
+      image: "/images/demosiro.png",
       github: "https://github.com/neotyaso/kyoka-suigetsu-castle",
       live: "https://kyoka-suigetsu-castle.vercel.app",
       status: "完成"
     },
     {
       title: "ポートフォリオサイト",
-      description: "現在制作中のポートフォリオサイト。モダンなUIライブラリを活用し、効率的な開発を実践。",
+      description: "自身のスキルと作品を紹介するポートフォリオサイト。モダンなUIと直感的なナビゲーションを実現。",
       tech: ["React", "TypeScript", "Tailwind CSS"],
-      image: "https://via.placeholder.com/600x400/10B981/ffffff?text=Portfolio+Site",
+      image: "/images/portfolio (2).png",
       github: "#",
       live: "#",
-      status: "制作中"
+      status: "完成"
     },
     {
-      title: "Laravel統合プロジェクト（予定）",
-      description: "既存のフロントエンドにLaravelでバックエンドAPI を構築し、フルスタック開発を実現予定。",
-      tech: ["Laravel", "PHP", "MySQL", "API開発"],
-      image: "https://via.placeholder.com/600x400/EF4444/ffffff?text=Laravel+Project",
-      github: "#",
-      live: "#",
-      status: "計画中"
+      title: "鏡花水月城（フルスタック版）",
+      description: "Laravel + Inertia.js + React で構築したモダンなフルスタックWebアプリケーション。Laravel Breezeによる認証機能を実装。",
+      tech: ["React", "JavaScript", "Laravel", "PHP", "Inertia.js", "SQLite", "Laravel Breeze", "Tailwind CSS", "Framer Motion", "Swiper.js"],
+      image: "/images/sirokansei.png",
+      github: "https://github.com/neotyaso/kyokasui-castle",
+      live: null,
+      status: "完成"
     }
   ];
 
@@ -284,10 +284,12 @@ const Projects = () => {
                       <Github className="w-5 h-5" />
                       GitHub
                     </a>
-                    <a href={project.live} className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
-                      <ExternalLink className="w-5 h-5" />
-                      Live Demo
-                    </a>
+                    {project.live && (
+                      <a href={project.live} className="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+                        <ExternalLink className="w-5 h-5" />
+                        Live Demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -322,27 +324,33 @@ const Timeline = () => {
     },
     {
       date: "2025年6月",
-      title: "React/TypeScript習得",
-      description: "モダンフロントエンド開発のためReactとTypeScriptを習得。",
+      title: "React/TypeScript学習開始",
+      description: "モダンフロントエンド開発のためReactとTypeScriptの学習を開始。",
       type: "learning"
     },
     {
-      date: "2025年8月",
+      date: "2025年7月",
       title: "初作品完成",
-      description: "Kyoka Suigetsu Castle を制作・公開。実務レベルの技術力を証明。",
+      description: "鏡花水月城をReactで制作・公開。",
       type: "achievement"
     },
     {
       date: "2025年8月",
       title: "ポートフォリオ制作",
       description: "インターン応募に向けてポートフォリオサイトを制作中。",
-      type: "current"
+      type: "achievement"
     },
     {
       date: "2025年8月",
-      title: "Laravel習得予定",
+      title: "Laravel・PHPを学習開始",
       description: "フルスタック開発のためLaravel（PHP）の学習を計画",
-      type: "future"
+      type: "learning"
+    },
+    {
+      date: "2025年8月",
+      title: "フルスタック作品完成",
+      description: "鏡花水月城をReact + Laravelで制作・公開。",
+      type: "achievement"
     },
     {
       date: "2025年夏",
@@ -413,11 +421,11 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gray-900 text-white">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Contact</h2>
+          <h2 className="text-4xl font-bold mb-4 ">Contact</h2>
           <p className="text-gray-300 text-lg">インターンシップやプロジェクトのご相談はお気軽にご連絡ください</p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="">
           {/* 連絡先情報 */}
           <div className="space-y-8">
             <div>
@@ -433,7 +441,7 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-blue-400" />
                 <div>
                   <p className="font-semibold">Contact</p>
-                  <p className="text-gray-300">下記のフォームからお気軽にご連絡ください</p>
+                  <p className="text-gray-300">neotyaso.dev@gmail.com</p>
                 </div>
               </div>
               
@@ -452,7 +460,7 @@ const Contact = () => {
               <h4 className="font-semibold mb-3">現在のスキルレベル</h4>
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span>React/TypeScript</span>
+                  <span>React</span>
                   <span className="text-blue-400">中級</span>
                 </div>
                 <div className="flex justify-between">
@@ -461,77 +469,18 @@ const Contact = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>JavaScript</span>
-                  <span className="text-green-400">上級</span>
+                  <span className="text-blue-400">中級</span>
                 </div>
                 <div className="flex justify-between">
                   <span>PHP/Laravel</span>
-                  <span className="text-yellow-400">学習予定</span>
+                  <span className="text-pink-400">初級</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Typescript</span>
+                  <span className="text-yellow-400">学習中</span>
                 </div>
               </div>
             </div>
-          </div>
-          
-          {/* コンタクトフォーム */}
-          <div className="bg-gray-800 p-8 rounded-lg">
-            <h3 className="text-xl font-bold mb-6">メッセージを送る</h3>
-            <form className="space-y-6" method="POST" action="/contact.php">
-              <div>
-                <label className="block text-sm font-medium mb-2">お名前 *</label>
-                <input 
-                  type="text" 
-                  name="name"
-                  required
-                  className="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:outline-none transition-colors" 
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-2">メールアドレス *</label>
-                <input 
-                  type="email" 
-                  name="email"
-                  required
-                  className="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:outline-none transition-colors" 
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-2">件名 *</label>
-                <select 
-                  name="subject"
-                  required
-                  className="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:outline-none transition-colors"
-                >
-                  <option value="">選択してください</option>
-                  <option value="internship">インターンシップについて</option>
-                  <option value="project">プロジェクトのご相談</option>
-                  <option value="collaboration">お仕事のご依頼</option>
-                  <option value="other">その他</option>
-                </select>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-2">メッセージ *</label>
-                <textarea 
-                  rows={4} 
-                  name="message"
-                  required
-                  placeholder="ご質問やご相談内容をお聞かせください..."
-                  className="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:border-blue-400 focus:outline-none transition-colors resize-vertical"
-                ></textarea>
-              </div>
-              
-              <button 
-                type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 rounded-lg font-bold hover:shadow-lg transform hover:scale-105 transition-all duration-200 disabled:opacity-50"
-              >
-                送信する
-              </button>
-            </form>
-            
-            <p className="text-sm text-gray-400 mt-4 text-center">
-              通常24時間以内にご返信いたします
-            </p>
           </div>
         </div>
       </div>

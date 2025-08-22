@@ -226,7 +226,7 @@ const Projects = () => {
       tech: ["React", "TypeScript", "Tailwind CSS"],
       image: "/images/portfolio (2).png",
       github: "https://github.com/neotyaso/my-portfolio",
-      live: "#",
+      live: "https://my-portfolio-chi-five-54.vercel.app/",
       status: "完成"
     },
     {

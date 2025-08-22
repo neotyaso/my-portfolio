@@ -225,7 +225,7 @@ const Projects = () => {
       description: "自身のスキルと作品を紹介するポートフォリオサイト。モダンなUIと直感的なナビゲーションを実現。",
       tech: ["React", "TypeScript", "Tailwind CSS"],
       image: "/images/portfolio (2).png",
-      github: "#",
+      github: "https://github.com/neotyaso/my-portfolio",
       live: "#",
       status: "完成"
     },

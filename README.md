@@ -1,69 +1,64 @@
-# React + TypeScript + Vite
+# 🚀 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+私のスキルと作品を紹介するポートフォリオサイトです。
 
-Currently, two official plugins are available:
+🌐 **Live Site**: https://my-portfolio-chi-five-54.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 概要
 
-## Expanding the ESLint configuration
+大学1年生のWebデベロッパーとして、これまでの学習過程と制作した作品をまとめたポートフォリオサイトです。React を使用してモダンで直感的なUIを実現し、レスポンシブデザインでどのデバイスからでも快適に閲覧できます。
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ 使用技術
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React** - UIライブラリ
+- **TypeScript** - 型安全な開発
+- **Tailwind CSS** - ユーティリティファーストCSS
+- **Lucide React** - アイコンライブラリ
+- **Vercel** - ホスティング・デプロイ
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ✨ 主な機能
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📱 レスポンシブデザイン
+- モバイル・タブレット・デスクトップ対応
+- ハンバーガーメニューによるモバイルナビゲーション
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🎨 モダンなUI/UX
+- グラデーション背景とアニメーション効果
+- 直感的なナビゲーション
+- 読みやすいタイポグラフィ
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 📄 コンテンツセクション
+- **Hero**: キャッチーな自己紹介
+- **About**: 経歴・学習背景・強み
+- **Projects**: 制作作品の詳細紹介
+- **Journey**: 学習タイムライン
+- **Contact**: 連絡先とスキルレベル
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎯 こだわりポイント
+
+### デザイン面
+- **美しいグラデーション**: ダークテーマのヒーローセクション
+- **アニメーション効果**: hover効果とトランジション
+- **統一されたカラーパレット**: ブルー・パープル系のブランドカラー
+
+### UX面
+- **直感的なナビゲーション**: スムーズなセクション移動
+- **読みやすいレイアウト**: 適切な余白とタイポグラフィ
+- **パフォーマンス重視**: 軽量で高速なサイト
+
+## 📈 今後の予定
+
+- [ ] プロジェクト詳細ページの追加
+- [ ] ブログ機能の実装
+- [ ] 多言語対応（英語）
+- [ ] ダークモード・ライトモード切り替え
+- [ ] お問い合わせフォームの実装（バックエンド連携）
+
+## 📞 Contact
+
+**Email**: neotyaso.dev@gmail.com  
+**GitHub**: [@neotyaso](https://github.com/neotyaso)
+
+---
+
+このポートフォリオサイトは、Web開発への情熱と継続的な学習姿勢を表現したものです。インターンシップや開発プロジェクトのご相談をお待ちしています。

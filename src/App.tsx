@@ -237,6 +237,15 @@ const Projects = () => {
       github: "https://github.com/neotyaso/kyokasui-castle",
       live: null,
       status: "完成"
+    },
+    {
+      title: "ブログ",
+      description: "基本的な CRUD 機能（作成・一覧表示・詳細表示・編集・削除）を実装し、学習成果を確認できるポートフォリオ用のプロジェクトです。",
+      tech: ["Laravel", "PHP", "SQLite", "Tailwind CSS",],
+      image: "/images/blog.png",
+      github: "https://github.com/neotyaso/laravel-blog-app/tree/main",
+      live: null,
+      status: "完成"
     }
   ];
 
